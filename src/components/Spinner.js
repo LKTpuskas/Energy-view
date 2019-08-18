@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes } from "styled-components";
 
 const rotate360 = keyframes`
   from {
@@ -10,12 +10,13 @@ const rotate360 = keyframes`
 `;
 
 const Spinner = styled.div`
-  margin: 4rem;
+  margin-left: 50%;
+  margin-top: 64px;
   display: flex;
   justify-content: center;
   animation: ${rotate360} 1s linear infinite;
   transform: translateZ(0);
-  
+
   border-top: 2px solid grey;
   border-right: 2px solid grey;
   border-bottom: 2px solid grey;

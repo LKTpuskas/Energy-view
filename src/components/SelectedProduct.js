@@ -1,8 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import ContentWrapper from './ContentWrapper';
-
-const CONTENT_PADDING = 40
+import React from "react";
+import styled from "styled-components";
+import ContentWrapper from "./ContentWrapper";
 
 const Wrapper = styled.div`
   display: flex;
@@ -10,7 +8,7 @@ const Wrapper = styled.div`
   background-color: #011739;
 `;
 const ProductImage = styled.img`
-  max-width: 100%; 
+  max-width: 100%;
   height: auto;
 `;
 
@@ -22,31 +20,36 @@ const ImageWrapper = styled.div`
 `;
 
 const ImageTitle = styled.h2`
-  font-weight: 500;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 1.2;
+  margin-bottom: 12px;
 `;
 
 const OtherInfo = styled.p`
-  opacity: 0.6;
+  color: #4d6ea4;
 `;
 
-const ContentSection = styled.div`background-color:#0a2859; padding-top: ${CONTENT_PADDING}px; margin-top: -${CONTENT_PADDING}px;`
+const ContentSection = styled.div`
+  background-color: #0a2859;
+  padding-top: 30px;
+  margin-top: -60px;
+`;
 
 const SelectedProduct = () => {
-  // <ContentWrapper customStyle={`margin-bottom: 60px;`}> override style like this
   return (
     <Wrapper>
-         <ImageWrapper>
-         <ProductImage src='http://www.industrytap.com/wp-content/uploads/2016/02/incandescent-e1456179151174.jpg' />
-          </ImageWrapper>
-          <ContentSection>
-          <ContentWrapper>
-        <ImageTitle>Energy saving light bulb</ImageTitle>
-        <OtherInfo>25W // Packet of 4</OtherInfo>
-      </ContentWrapper >
-          </ContentSection>
-
+      <ImageWrapper>
+        <ProductImage src="http://www.industrytap.com/wp-content/uploads/2016/02/incandescent-e1456179151174.jpg" />
+      </ImageWrapper>
+      <ContentSection>
+        <ContentWrapper>
+          <ImageTitle>Energy saving light bulb</ImageTitle>
+          <OtherInfo>25W // Packet of 4</OtherInfo>
+        </ContentWrapper>
+      </ContentSection>
     </Wrapper>
   );
-}
+};
 
 export default SelectedProduct;

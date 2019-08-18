@@ -1,7 +1,7 @@
-import React from 'react';
-import { createGlobalStyle } from 'styled-components';
-import Footer from './Footer';
-import Header from './Header';
+import React from "react";
+import { createGlobalStyle } from "styled-components";
+import Footer from "./Footer";
+import Header from "./Header";
 
 const GlobalStyle = createGlobalStyle`
 * {
@@ -28,10 +28,8 @@ const Layout = ({ children }) => {
   return (
     <React.Fragment>
       <GlobalStyle />
-      <Header/>
-      <main>
-        {children}
-      </main>
+      <Header />
+      <main>{children}</main>
       <Footer />
     </React.Fragment>
   );
